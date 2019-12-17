@@ -955,7 +955,7 @@ function (_React$Component) {
         style: [styles$4[this.props.position].container, this.props.containerStyle[this.props.position]]
       }, React__default.createElement(ParsedText, {
         style: [styles$4[this.props.position].text, this.props.textStyle[this.props.position], this.props.customTextStyle],
-        parse: _toConsumableArray(this.props.parsePatterns(linkStyle)).concat([{
+        parse: [].concat(_toConsumableArray(this.props.parsePatterns(linkStyle)), [{
           type: 'url',
           style: linkStyle,
           onPress: this.onUrlPress
@@ -2713,7 +2713,8 @@ function (_React$Component) {
       return React__default.createElement("div", {
         style: {
           height: "calc(100% - ".concat(this.state.composerHeight, "px)"),
-          display: 'flex'
+          display: 'flex',
+          flexDirection: 'column'
         }
       }, React__default.createElement(MessageContainer, Object.assign({}, this.props, {
         invertibleScrollViewProps: this.invertibleScrollViewProps,
