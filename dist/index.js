@@ -2227,7 +2227,9 @@ function (_Component) {
       if (this.webViewRef) {
         this.webViewRef.scrollTop = options.y;
         setTimeout(function () {
-          _this2.webViewRef.style.visibility = 'visible';
+          if (_this2.webViewRef) {
+            _this2.webViewRef.style.visibility = 'visible';
+          }
         }, 0);
       }
     }

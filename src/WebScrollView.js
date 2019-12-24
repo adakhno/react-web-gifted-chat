@@ -23,7 +23,9 @@ export default class WebScrollView extends Component {
     if (this.webViewRef) {
       this.webViewRef.scrollTop = options.y;
       setTimeout(() => {
-        this.webViewRef.style.visibility = 'visible';
+        if (this.webViewRef) {
+          this.webViewRef.style.visibility = 'visible';
+        }
       }, 0);
     }
   }
